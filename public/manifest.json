@@ -1,0 +1,21 @@
+{
+  "name": "Prestige Medical",
+  "short_name": "PrestigeMed",
+  "description": "Leader de l'équipement médical à Sfax et en Tunisie.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc; /* Slate 50 */
+  --foreground: #0f172a; /* Slate 900 */
+  
+  /* Prestige Medical Palette */
+  --medical-primary: #0A192F; /* Navy Deep - Authority */
+  --medical-accent: #00B4D8;  /* Medical Cyan - Trust */
+  --medical-success: #10B981; /* Emerald Safe */
+  
+  /* Legacy/Compatibility */
+  --medical-blue: var(--medical-primary);
+  --safety-green: var(--medical-success);
+}
+
+/* Utility classes mapped to CSS variables (replacing Tailwind @theme usage) */
+.text-medical-primary { color: var(--medical-primary); }
+.bg-medical-primary { background-color: var(--medical-primary); }
+.border-medical-primary { border-color: var(--medical-primary); }
+.ring-medical-primary { box-shadow: 0 0 0 3px var(--medical-primary); }
+
+.text-medical-accent { color: var(--medical-accent); }
+.bg-medical-accent { background-color: var(--medical-accent); }
+.border-medical-accent { border-color: var(--medical-accent); }
+
+.text-medical-success { color: var(--medical-success); }
+.bg-medical-success { background-color: var(--medical-success); }
+.border-medical-success { border-color: var(--medical-success); }
+
+/* Legacy alias */
+.text-medical-blue { color: var(--medical-blue); }
+.bg-medical-blue { background-color: var(--medical-blue); }
+.border-medical-blue { border-color: var(--medical-blue); }
+
+/* Shadows and fonts */
+:root {
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+}
+
+.glass-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  box-shadow: var(--shadow-2xl);
+  transform: translateY(-4px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
